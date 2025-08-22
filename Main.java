@@ -1,5 +1,6 @@
 //import java.util.Scanner; // this is how we can get other tools that can help us make make what we want to
-import java.util.Random;
+//import java.util.ArrayList; // for arrayList 
+//import java.util.Random;
 import javax.swing.JOptionPane; // for makeing GUI pane I think ( keep this )
 // link to what I am using to learn - https://youtu.be/xk4_1vDrzzo?si=1dAL7H_JxT_xeWfW 
 public class Main {
@@ -76,16 +77,196 @@ public class Main {
 			System.out.println("worked 2");
 		}
 		*/
-		// switch
+		/* switch
 		String yes = "yes";
 		switch(yes) {
-			case "": System.out.println("yes");
+			case "": System.out.println("not yes");
 			break;
+			case "yes": System.out.println("is yes");
+			break;
+			case "no": System.out.println("not yes");
+			break;
+//			case "yes": System.out.println("yes I know"); // will error if more of same
+//			break;
+//			case "yes": System.out.println("no yes no");
+//			break;
+			default: System.out.println("not yes or no was found");
 		}
+		*/
+		/*
+		logical operators = used to connect 2 or more expressions
+		&& = if blank and blank is true to work
+		|| = one or the other needs to be true
+		! = if it is used with equel than means not equel
+		Scanner askUserSomething = new Scanner(System.in); // think about it and I think in is the input while the .out is the output 
+		String name = "";
+		// loop with isBlank
+		while(name.isBlank()) {
+		System.out.print("what is your name:\t");
+		name = askUserSomething.nextLine();
+		}
+		if did 
+		do{
+		code
+		}while(name.isBlank()); // it will do the code before checking if it should 
+		// forloop
+		for(int i=0; i<=10; i++) {
+		code runs 11 time start at index of 0
+		// i++ and i-- are the same but one adds to i 1 while other takes 1 (you may be able to do i+2 to add to)
+		}
+		*/
+		//String[] names = {"Lee", "Franklin", "Cash"};
+		//names[0] = "Name"; // will change index 0 from Lee to Name
+		//System.out.println(names[0]);
+		//String[] Names = new String[3]; // making 4 strings with null 
+		//Names[0] = "Leeeeeeeeeeee";
+		//System.out.println(Names[0]);
+		//String[][] userNames = new String[3][3];
+		//userNames[2][2] = "Lee";
+		//System.out.println(userNames[2][2]);
+		//System.out.println(userNames[1][1]);
+		/*
+		String[][] something = { 
+						{"L", "E", "E"},
+						{"F", "."},
+						{"C", "A", "S", "H"},
+					};
+		for(int i=0; i<something.length; i++) {
+			System.out.println();
+			for(int j=0; j<something[i].length; j++) {
+				System.out.print(something[i][j]+" ");
+			}
+			System.out.println();
+		}
+		*/
+		/*
+		String name = "bro";
+		boolean resultBoolean = name.equals("Bro"); // is it the same
+		char resultBoolean2 = name.charAt(0); // what is at index 0 
+		int resultBoolean3 = name.indexOf("o"); // where is o in bro
+		boolean resultBoolean4 = name.isEmpty(); // is there anything 
+		// ".toLowerCase();" and "toUpperCase();"
+		// ".trim(); removes all empty space"
+		String resultBoolean5 = name.replace('b', 'B'); // did the b change to B in bro
+		System.out.println(resultBoolean);
+		System.out.println(resultBoolean2);
+		System.out.println(resultBoolean3);
+		System.out.println(resultBoolean4);
+		System.out.println(resultBoolean5);
+		*/
+		/*
+		when doing 
+		Boolean a = true;
+		Character b = '@';
+		Integer c = 123;
+		Double d = 3.14;
+		String e = "bro";
+		then you can do 
+		if(b=="@"){}
+		I think if I understood correctly 
+		*/
+		/*
+		ArrayList<String> food = new ArrayList<String>(); // need import java.util.ArrayList;
+		food.add("pizza");
+		food.add("hamburger");
+		food.add("chicken");
+		ArrayList<String> t = new ArrayList<String>(); // need import java.util.ArrayList;
+		t.add("pork");
+		t.add("beef");
+		ArrayList<ArrayList<String>> f = new ArrayList();
+		f.add(food);
+		f.add(t);
+		//food.set();
+		//food.remove();
+		//food.clear();
+		for(int i=0; i<food.size(); i++){
+			System.out.println(food.get(i)); // get allows you to get a letter from string or word from array
+		}
+		System.out.println(food);
+		System.out.println(t);
+		System.out.println(f);
+		System.out.println(f.get(0).get(0));
+		*/
+		/*
+		//String[] animals = {"cat", "dog", "rat", "bird"};
+		ArrayList<String> animals = new ArrayList<String>();
+		animals.add("cat");
+		animals.add("dog");
+		animals.add("rat");
+		animals.add("bird");
+		for(String i : animals){
+			System.out.println(i);
+		}
+		*/
+		// %d is for int 
+		// %b to show boolean 
+		// %c to show char
+		// %f for Double
+		// %10s is for putting 10 spaces if %-10s than it is after not before  
+		// %.2f this will limit the 1000.00000000 to 1000.00
+		// %20f is "                    1000.00000000"
+		// %+f is "+1000.00000000" and %-f "-1000.00000000"
+		// %,f is "1,000.00000000"
+		//System.out.printf("this is a format string %d",123);
+		//System.out.printf("this is a format string %d",123.2);
+		//System.out.printf("this is a format string %d",123);
+		//System.out.printf("this is a format string %d",123);
+		//System.out.printf("this is a format string %d",123);
+		//System.out.printf("this is a format string %d",123);
+		//System.out.printf("this is a format string %d",123);
+		//System.out.printf("this is a format string %d",123);
+		// "final var" cannot be changed 
+		/* // to get working in terminal(new .class files are needed) when using more than one file do javac on all files than do java Main "note no .java"
+		// or make it to use Getters and only have the other file "Car.java" be compiled by javac Car.java to the output of "Car.class"
+		Car myCar1 = new Car();
+		Car myCar2 = new Car();
+		System.out.println(myCar1.getMake());
+		System.out.println(myCar1.getModel());
+		System.out.println();
+		System.out.println(myCar2.getMake());
+		System.out.println(myCar2.getModel());
+		*/
+		//
+		// In Java, if a constructor (or method) does not have an explicit access modifier (like public, private, etc.), it defaults to package-private (accessible only within the same package). whitch means you will need to do "javac Human.java" then "java Main" note without .java
+		Human human1 = new Human("Lee",21,70);
+		Human human2 = new Human("Cash",21,70);
+		System.out.println(human1.name);
+		System.out.println(human2.name);
+		//
+		human1.doing();
+		human2.nothing();
+		//
 		/*
 		to keep them apart 1
 		*/
-		/*
+		//thePC(); //"acts like a function in javascript" by video linked at top this is a method not a function "in methud static void thePC(String name){this is what it will be like if I gave a var to it}" 
+		//double x = add(1.0,2.0); // // overloaded methods = methods that share the same name but have different perameters 
+	}
+	static int add(int a, int b){
+		System.out.println("this is overloadad method #1");
+		return a + b;
+	}
+	static int add(int a, int b, int c){
+		System.out.println("this is overloadad method #2");
+		return a + b + c;
+	}
+	static int add(int a, int b, int c, int d){
+		System.out.println("this is overloadad method #3");
+		return a + b + c + d;
+	}
+	static double add(double a, double b){
+		System.out.println("this is overloadad method #4");
+		return a + b;
+	}
+	static double add(double a, double b, double c){
+		System.out.println("this is overloadad method #5");
+		return a + b + c;
+	}
+	static double add(double a, double b, double c, double d){
+		System.out.println("this is overloadad method #6");
+		return a + b + c + d;
+	}
+	static void thePC(){
 		String password = JOptionPane.showInputDialog("what is the password?"); //uses tool to open password window and stores input to password string
 		System.out.println(password); // will show password typed by user in terminal 
 		// if I want a int I do "int age = Integer.parseInt(JOptionPane.showInputDialog("enter your pin code"));"
@@ -95,6 +276,5 @@ public class Main {
 		System.exit(0);
 		}
 		JOptionPane.showMessageDialog(null, "password you have entered is "+password+".\nyou are welcomed in.");
-		*/
 	}
 }
