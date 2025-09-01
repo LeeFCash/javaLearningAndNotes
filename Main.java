@@ -226,7 +226,7 @@ public class Main {
 		System.out.println(myCar2.getMake());
 		System.out.println(myCar2.getModel());
 		*/
-		//
+		/*
 		// In Java, if a constructor (or method) does not have an explicit access modifier (like public, private, etc.), it defaults to package-private (accessible only within the same package). whitch means you will need to do "javac Human.java" then "java Main" note without .java
 		Human human1 = new Human("Lee",21,70);
 		Human human2 = new Human("Cash",21,70);
@@ -235,7 +235,28 @@ public class Main {
 		//
 		human1.doing();
 		human2.nothing();
+		*/
+		// 
+		//Human human1 = new Human("Lee",21,70);
+		//Human human2 = new Human("F",21);
+		//Human human3 = new Human("Cash");
+		//Human test = new Human("some",21,70,"thing");
+		//System.out.println(human1.name+" "+human1.age+" "+human1.weight);// has all
+		//System.out.println(human2.name+" "+human2.age+" "+human2.weight);// has name and age but weight is 0.0 due to it not having one 
+		//System.out.println(human3.name+" "+human3.age+" "+human3.weight);// has only name and due to that everything else is 0 or 0.0
 		//
+		//System.out.println(human2.toString());// only gives name
+		//System.out.println(test.toStringCanDo());// only gives canDo
+		Human[] arrayOfObjectsMaybeHuman = {
+			new Human("Lee",21,70),
+			new Human("F",21),
+			new Human("Cash"),
+			new Human("some",21,70,"thing")};
+		//System.out.println(human1.name+" "+human1.age+" "+human1.weight);// has all
+		System.out.println(arrayOfObjectsMaybeHuman[3].canDo);// gives thing from test
+		//
+		//human1.doing();
+		//human2.nothing();
 		/*
 		to keep them apart 1
 		*/
