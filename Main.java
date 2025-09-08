@@ -236,7 +236,7 @@ public class Main {
 		human1.doing();
 		human2.nothing();
 		*/
-		// 
+		/* 
 		//Human human1 = new Human("Lee",21,70);
 		//Human human2 = new Human("F",21);
 		//Human human3 = new Human("Cash");
@@ -257,6 +257,12 @@ public class Main {
 		//
 		//human1.doing();
 		//human2.nothing();
+		*/
+		/*
+		encapsulation = attributes of a class will be hidden or private, can be accessed only through methods (getters and setters) (private if no reason )
+		*/
+		Car car = new Car("car model","car model",2022);
+		System.out.println(car.getYear());
 		/*
 		to keep them apart 1
 		*/

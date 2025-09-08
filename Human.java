@@ -8,6 +8,13 @@ public class Human {
 	 static String name;
 	 private String name;
 	 */
+	/*
+	 abstract class  cannnot be instantiated but can have subclass
+	 abstract void go(); # does not have a body 
+	# Need to override is 
+	void go() {# body done this way if I understand right 
+	}
+	*/
 	/* I think this will auto give's what is in Human to car 
 public class Car extends Human{
 	...

@@ -4,7 +4,19 @@ public class Car {
     private int year = 2020;
     private String color = "blue";
     private double price = 50000.00;
-
+/* how to without setter 
+    Car(String make, String model, int year){
+    	this.make = make;
+    	this.model = model;
+    	this.year = year;
+    }
+*/
+    // with setters 
+    Car(String make, String model, int year){
+    	this.setMake(make);
+    	this.setModel(model);
+    	this.setYear(year);
+    }
     // Getters
     public String getMake() {
         return make;
@@ -12,6 +24,20 @@ public class Car {
 
     public String getModel() {
         return model;
+    }
+
+    public int getYear() {
+        return year;
+    }
+//  setter 
+    public void setMake(String make) {
+	    this.make = make;
+    }
+    public void setModel(String model) {
+	    this.model = model;
+    }
+    public void setYear(int year) {
+	    this.year = year;
     }
 
     public void drive() {

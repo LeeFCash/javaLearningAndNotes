@@ -1,0 +1,12 @@
+All this is from my understanding (down)
+javac package1/*.java package2/*.java
+for the command that is 1 line up it is to "Compile all .java files in package1 and package2 together to resolve dependencies. From the root directory" in other words in the dir that has packages 1 and 2 dir's it takes all the .java from both dir package1 and package 2 and compile's it all together to resolve dependecies which I think mean it act as root is the dir that has both package 1 and 2.
+------
+To run Asub (which contains the main method), you need to specify the classpath to include the root directory (.), so Java can find package1.A and package2.C. Run:
+java -cp . package2.Asub
+-cp . sets the classpath to the current directory (.), which is the root of the package hierarchy.
+package2.Asub specifies the fully qualified class name (package2.Asub) to run the main method in Asub.
+-----
+The java Asub.java command is a convenience feature that compiles and runs a single .java file, but it’s not ideal for programs with multiple packages or dependencies. It assumes all referenced .class files are already available in the classpath
+-----
+The circular imports (package1 importing package2.* and package2 importing package1.*) are not inherently wrong but can cause issues if not all classes are compiled together.
