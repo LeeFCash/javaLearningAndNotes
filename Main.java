@@ -1,7 +1,15 @@
-//import java.util.Scanner; // this is how we can get other tools that can help us make make what we want to
+import java.util.Scanner; // this is how we can get other tools that can help us make make what we want to
+import java.io.FileWriter; // for file writer 
+import java.io.File; // to find / check and delete files
+import java.io.*;// import all in java.util
+import java.util.InputMismatchException;
+import java.io.IOException;// trackor I think 
 //import java.util.ArrayList; // for arrayList 
 //import java.util.Random;
 import javax.swing.JOptionPane; // for makeing GUI pane I think ( keep this )
+/*
+The import java.util.*; statement in Java imports all the public classes, interfaces, and enums in the java.util package. This is a wildcard import that allows you to use any class from the java.util package without explicitly importing each one individually. However, it does not import subpackages (e.g., java.util.concurrent or java.util.function) or non-public members.
+*/
 // link to what I am using to learn - https://youtu.be/xk4_1vDrzzo?si=1dAL7H_JxT_xeWfW 
 public class Main {
 //	main methud down what is runned when doing java Main.java command if I understand correctly
@@ -261,8 +269,109 @@ public class Main {
 		/*
 		encapsulation = attributes of a class will be hidden or private, can be accessed only through methods (getters and setters) (private if no reason )
 		*/
-		Car car = new Car("car model","car model",2022);
-		System.out.println(car.getYear());
+		//Car car = new Car("car model","car model",2022);
+		//Car car2 = new Car("car mol","car mo",20);
+		//car2.copy(car); // from the Car file
+		//Car car2 = new Car(car); // copy and make together need file Car
+		//car = car2; // this acts like if you have 1 car but is shared by 2 vars ( same address )
+		//System.out.println(car2.getYear());
+		//Rabbit rabbit = new Rabbit();
+		//Hawk hawk = new Hawk();
+		//hawk.hunt();
+		//rabbit.flee();
+		// polymorphism = "greek word for poly - "many", morph - "form" the ability of an object to identify as more than one type "
+		/*
+		Car car = new Car();
+		Bicycle bicycle = new Bicycle();
+		Boat boat = new boat();
+		//
+		Vehicle[] racers = {car,bicycle,boat};
+		for(Vehicle x : racers) {
+			x.go();// if the code was set up this would run .go(); for all in array racers that is a Vehicle
+		}
+		*/
+		/*
+		Scanner scanner = new Scanner(System.in);
+		Animal animal;
+		System.out.println("pick 1 or 2");
+		int choice = scanner.nextInt();
+		if(choice==1) {
+			animal = new Dog();
+			animal.speak();
+		}
+		if(choice==2) {
+			animal = new Cat();
+			animal.speak();
+		}
+		if(choice != 1 && choice != 2) {
+			animal = new Animal();
+			animal.speak();
+		}
+		*/
+		/*
+		// exception = an event that occurs during  the execution of a profram that,
+		//             disrupts the normal flow of instructions 
+		try {
+			Scanner scanner = new Scanner(System.in);
+			System.out.println("type 2 number but press enter after first : will be divided ");
+			int x = scanner.nextInt();
+			int y = scanner.nextInt();
+			int z = x/y;
+			System.out.println(z);
+		}
+		catch(ArithmeticException e){
+		System.out.println("problem maybe try not entering 0");
+		}
+		catch(InputMismatchException e){// import java.util.InputMismatchException; needed
+		System.out.println("problem maybe try not entering a word or letter");
+		}
+		catch(Exception e){
+			System.out.println("error /?!{|}>,.<'gsoeuirfgf;laekrjdbga;eruej something");
+		}
+		finally {
+			System.out.println("alwaysssssssssssssss");
+		}
+		*/
+		/* // audio stuff not tested by me // need something like scanner 
+		import javax.sound.sampled.*;
+		public static void main(String[] args){
+			File file = new File("Level_Up.wav");
+			AudioInputStream audieStream = AudioSystem.getAudioInputStream(file);
+			Clip clip = AudioSystem.getClip();
+			(audioStream);
+			clip.start();
+		}
+		*/
+		try{
+		File file = new File("testFile.txt");// path to file or same project dir 
+		FileWriter fileW = new FileWriter("ttestFile.txt");// path to file or same project dir 
+		FileReader reader = new FileReader("ttestFile.txt");// path to file or same project dir 
+		/*if(file.exists()){
+			System.out.println("WHAT I HAVE A TEST FILE");
+			System.out.println(file.getPath());
+			System.out.println(file.getAbsolutePath());
+			System.out.println(file.isFile());
+			file.delete();
+		}*/
+		fileW.write("this is a test");
+		fileW.write("\nthis is a test2");
+		fileW.write("\nfor reader");
+		//fileW.append("\nthis is a test3 was appended ");
+		fileW.close();
+		int data = reader.read();
+		while(data != -1) {
+			System.out.print((char)data);// puts what is in the file
+			//System.out.print(data);// puts numbers or something
+			data = reader.read();
+		}
+		reader.close();
+		}
+		catch(FileNotFoundException e){
+		e.printStackTrace();
+		}
+		catch(IOException e){
+		e.printStackTrace();
+		}
 		/*
 		to keep them apart 1
 		*/

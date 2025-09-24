@@ -39,7 +39,17 @@ public class Car {
     public void setYear(int year) {
 	    this.year = year;
     }
-
+//
+	public void copy(Car x) {
+		this.setMake(x.getMake());
+		this.setModel(x.getModel());
+		this.setYear(x.getYear());
+	}
+//
+	Car(Car x) {// a constuctor that takes the .copy() that already made and uses it 
+	this.copy(x);
+	}
+//
     public void drive() {
         System.out.println("drive the car");
     }
