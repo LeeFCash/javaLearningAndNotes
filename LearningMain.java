@@ -1,4 +1,7 @@
 import java.util.Scanner; // this is how we can get other tools that can help us make make what we want to
+import java.awt.Color; // color
+import javax.swing.JFrame; // for GUI
+import javax.swing.*; // for all GUI stuff I think
 import java.io.FileWriter; // for file writer 
 import java.io.File; // to find / check and delete files
 import java.io.*;// import all in java.util
@@ -11,7 +14,7 @@ import javax.swing.JOptionPane; // for makeing GUI pane I think ( keep this )
 The import java.util.*; statement in Java imports all the public classes, interfaces, and enums in the java.util package. This is a wildcard import that allows you to use any class from the java.util package without explicitly importing each one individually. However, it does not import subpackages (e.g., java.util.concurrent or java.util.function) or non-public members.
 */
 // link to what I am using to learn - https://youtu.be/xk4_1vDrzzo?si=1dAL7H_JxT_xeWfW 
-public class Main {
+public class LearningMain {
 //	main methud down what is runned when doing java Main.java command if I understand correctly
 	public static void main(String[] args) {
 		// a comment
@@ -341,21 +344,21 @@ public class Main {
 			(audioStream);
 			clip.start();
 		}
-		*/
+		*//*
 		try{
 		File file = new File("testFile.txt");// path to file or same project dir 
 		FileWriter fileW = new FileWriter("ttestFile.txt");// path to file or same project dir 
 		FileReader reader = new FileReader("ttestFile.txt");// path to file or same project dir 
-		/*if(file.exists()){
-			System.out.println("WHAT I HAVE A TEST FILE");
-			System.out.println(file.getPath());
-			System.out.println(file.getAbsolutePath());
-			System.out.println(file.isFile());
-			file.delete();
-		}*/
+//		if(file.exists()){
+//			System.out.println("WHAT I HAVE A TEST FILE");
+//			System.out.println(file.getPath());
+//			System.out.println(file.getAbsolutePath());
+//			System.out.println(file.isFile());
+//			file.delete();
+//		}
 		fileW.write("this is a test");
 		fileW.write("\nthis is a test2");
-		fileW.write("\nfor reader");
+		fileW.write("\nfor reader testing 123");
 		//fileW.append("\nthis is a test3 was appended ");
 		fileW.close();
 		int data = reader.read();
@@ -372,10 +375,11 @@ public class Main {
 		catch(IOException e){
 		e.printStackTrace();
 		}
+		*/
 		/*
 		to keep them apart 1
 		*/
-		//thePC(); //"acts like a function in javascript" by video linked at top this is a method not a function "in methud static void thePC(String name){this is what it will be like if I gave a var to it}" 
+		thePC(); //"acts like a function in javascript" by video linked at top this is a method not a function "in methud static void thePC(String name){this is what it will be like if I gave a var to it}" 
 		//double x = add(1.0,2.0); // // overloaded methods = methods that share the same name but have different perameters 
 	}
 	static int add(int a, int b){
@@ -412,5 +416,17 @@ public class Main {
 		System.exit(0);
 		}
 		JOptionPane.showMessageDialog(null, "password you have entered is "+password+".\nyou are welcomed in.");
+		/*
+		JFrame window = new JFrame();
+		window.setTitle("PC app also for learning"); // when using window manager this does not show or at least on hyprland 
+		window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // exit=(close it), HIDE=(go to background), DO_NOTHING=(do nothing), DISPOSE_ON_CLOSE=(which disposes of the window (frees its resources) but may not terminate the application if other windows remain open.)
+		window.setResizable(true);
+		window.setSize(500,500);
+		window.setVisible(true); // make window visible 
+		//ImageIcon image = new ImageIcon("logo.png")// for icon change for window 
+		//window.setIconImage(image.getImage()); // change icon 
+		window.getContentPane().setBackground(new Color(0,0,0));// Color.BLACK
+		*/
+		MyWindow window = new MyWindow();
 	}
 }
