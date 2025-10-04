@@ -190,3 +190,458 @@ A class can implement only one interface type.
 20)
 A method that has no implementation is called a/an ____ method.
 abstract
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+Quiz 02 (Chapter 09)
+1)
+When identifying the proper instance variables to use in the design of an inheritance hierarchy, how do you decide where in the hierarchy a variable should be placed?
+Instance variables that are common to all classes should be placed at the base (super class) of the hierarch. <-- 
+2)
+Consider the following code snippet:
+
+Employee programmer = new Employee(10254, "exempt");
+String s = programmer.toString();
+Assume that the Employee class has not implemented its own toString() method. What value will s contain when this code is executed?
+s will contain the class name of the programmer object followed by a hash code. <--
+3)
+Which keyword is used to create a subclass?
+extends
+4)
+Which of the following statements about superclasses and subclasses is true?
+A subclass extends a superclass. <---
+5)
+What must a subclass do to modify a private superclass instance variable?
+The subclass must use a public method of the superclass (if it exists) to update the superclass's private instance variable. <---
+6)
+Given the following code, find the compile error? (Select all that apply)
+
+public class Test {
+    public static void main(String[] args) {
+       m(new GraduateStudent());
+       m(new Student());
+       m(new Person());
+       m(new Object());
+     }
+
+     public static void m(Student x) {
+        System.out.println(x.toString());
+     }
+}
+
+    class GraduateStudent extends Student {
+    }
+
+    class Student extends Person {
+        public String toString() {
+        return "Student";
+        }
+    }
+
+    class Person extends Object {
+         public String toString() {
+         return "Person";
+    }
+}
+
+m(new Student()) causes an error <---  right 
+m(new Person()) causes an error  <---  maybe right
+m(new Object()) causes an error  <---  maybe right
+7)
+Which reserved word must be used to call a method of a superclass?
+super <---
+8)
+Consider the following code snippet:
+
+public class Vehicle
+{
+   . . .
+   public void setVehicleAttributes()
+   {
+      . . .
+   }
+}
+public class Auto extends Vehicle
+{
+   . . . 
+   public void setVehicleAttributes()
+   {
+   . . .
+   }
+}
+Which of the following statements is correct?
+The subclass is overriding a superclass method. <---
+9)
+Which of the following statements about comparing objects is correct?
+The purpose of the equals method is to compare whether two objects have the same contents.
+10)
+What is the term used for a subclass that defines a method with the same name as a method in its superclass, but with different parameter types?
+overloading <--- 
+11)
+Consider the following code snippet:
+
+public class Motorcycle extends Vehicle
+{
+   . . . 
+   public Motorcycle(int numberAxles)
+   {
+      super(numberAxles); //line #1
+   }
+}
+If the line marked "//line #1" was missing, which of these statements would be correct?
+The Motorcycle class constructor would invoke the constructor of the Vehicle class with no parameters.
+12)
+Suppose you create a class Square to be a subclass of GeometricObject. Analyze the following code:
+
+class Square extends GeometricObject {
+double length;
+
+Square(double length) {
+GeometricObject(length);
+}
+}
+The program has a compile error because you attempted to invoke the GeometricObject class's constructor illegally.
+13)
+To test whether an object belongs to a particular type, use
+the instanceof operator.
+14)
+Consider the following class hierarchy:
+
+public class Vehicle
+{
+   private String type;
+   public Vehicle(String type)
+   {
+      this.type = type;
+   }
+   public String displayInfo()
+   {
+      return type;
+   }
+}
+public class LandVehicle extends Vehicle
+{
+   public LandVehicle(String type)
+   {
+      . . .
+   }
+}
+public class Auto extends LandVehicle
+{
+   public Auto(String type)
+   {
+      . . .
+   }
+   public String displayAutoType()
+   {
+      return _____;
+   }
+}
+Complete the code in the Auto class method named displayAutoType to return the type data.
+super.displayInfo()
+15)
+What must a subclass method do in order to override a superclass method?
+Must use the same method name and the same parameter types.
+16)
+Consider the following class hierarchy:
+
+public class Vehicle
+{
+   private String type;
+   public Vehicle(String type)
+   {
+      this.type = type;
+   }
+   public String displayInfo()
+   {
+      return type;
+   }
+}
+ 
+public class LandVehicle extends Vehicle
+{
+   public LandVehicle(String type)
+   {    
+      super(type);
+   }
+}
+ 
+public class Auto extends LandVehicle
+{
+   public Auto(String type)
+   {
+      _________;
+   }
+}
+Complete the code in the Auto class constructor to store the type data.
+super(type);
+17)
+Consider the following code snippet:
+
+Employee anEmployee = new Programmer();
+String emp = anEmployee.toString();
+Assume that the Programmer class inherits from the Employee class, and only the Employee class has an implementation of the toString() method. Which of the following statements is correct?
+The toString() method of the Employee class will be used when this code is executed. <--
+18)
+When the reserved word super is followed by a parenthesis, what does it indicate?
+A call to a superclass constructor. <---
+19)
+In Java, if you forget to call a superclass constructor explicitly in the constructor of a subclass, what will happen?
+The default constructor (the one with no arguments) of the superclass will be invoked automatically. <--- 
+20)
+Which of the following statements are true? (Select all that apply)
+Selected - "class A extends B" means A is a subclass of B.
+selected - A superclass is a subset of a subclass.
+selected - "class A extends B" means B is a subclass of A.
+Selected - A subclass is usually extended to contain more functions and more detailed information than its superclass.
+21)
+Which of the following indicates that a class named ClassA class is a superclass of the ClassB class?
+public class ClassB extends ClassA <---
+22)
+If a subclass defines the same method name and the same parameter types for a method that appears in its superclass, which statement is true?
+the subclass method overrides the superclass method. <---
+23)
+Analyze the following code:
+
+public class Test {
+   public static void main(String[] args) {
+      B b = new B();
+      b.m(5);
+      System.out.println("i is " + b.i);
+   }
+}
+
+class A {
+   int i;
+
+   public void m(int i) {
+      this.i = i;
+   }
+}
+
+class B extends A {
+   public void m(String s) {
+   }
+}
+The method m is not overridden in B. B inherits the method m from A and defines an overloaded method m in B.
+24)
+Which of the following statements is true about using the reserved word super to call a superclass constructor?
+The call must be the first line of the subclass constructor.
+25)
+Consider the following code snippet:
+public class Auto extends Vehicle
+{
+   . . . 
+   public Auto(int numberAxles)
+   {
+      super(numberAxles);
+   }
+}
+What does this code do?
+It invokes the constructor of the Vehicle class from within the constructor of the Auto class.
+Quiz 01 (Chapter 08)
+1)
+Which class category has static methods and constants, but no objects?
+Utility class
+2)
+Which of the following represents a good strategy regarding cohesion and class dependencies?
+Maximize cohesion and remove unnecessary dependencies.
+3)
+Which of the following is an example of an immutable class?
+String.
+4)
+What is the name of a class that has only accessor methods and no mutators methods?
+Immutable
+5)
+It is common for certain classes to keep track of how many times certain events have occurred over the life of an object. This is done using
+A private instance variable within the class.
+6)
+Suppose an object is intended to store its current position in a 2D array using private instance variables:
+
+private int row;
+private int column;
+Which code represents a method that would move the current position of the object one column to the right on the grid?
+public void moveRight()
+{
+  column++;
+}
+7)
+The use of the static keyword in a method declaration implies which of the following?
+The method cannot be invoked on an instance of an object.
+8)
+Why is a static variable also referred to as a class variable?
+There is a single copy available to all objects of the class.
+9)
+Which of the following statements is generally true regarding static methods and variables?
+The use of static variables and methods should be minimized.
+10)
+Where in a class should static variables be declared and initialized?
+Inside the class, but outside of any method body.
+11)
+A new method, getMonthName, to get the name of the Date's month ("January", February", etc.) is to be added to the class Date. The Date class already has a class variable that stores the month as an integer. Which of the following headers should the new method have?
+public String getMonthName()
+12)
+A new class is proposed to collect information about a group of DVDs. A separate class containing information about a single DVD, named DVD, has already been created. Which of the following is the best design to store the data and size of this collection?
+Have an ArrayList of DVD and use its size as the size of the collection.
+13)
+If you do not include a package statement at the top of your class source file, its classes will be placed in which package?
+the default package, which has no name
+14)
+Consider the Checker class below.
+
+public class Checker 
+{
+   public static int count = 0;
+   public int number = 0;
+   
+   public Checker()
+   {
+      count++;
+      number = count;
+   }
+   
+   public int getCount() { return count; }
+ 
+   public int getNumber() { return number; }
+}
+What is output from the code fragment below?
+
+Checker one = new Checker();
+Checker two = new Checker();
+System.out.println(one.getCount() + " " + two.getCount());
+2 2     <---
+15)
+How would you create the class PackageSample in a package named bigjava.Chapter8?
+package bigjava.chapter8; public class PackageSample {}
+16)
+Consider the partial JUnit test below, designed to test a class that keeps a count:
+
+@Test public void twoIncrements()
+{
+   Counter ctr = newCounter(10);
+   ctr.increment();
+   ctr.increment();
+   //  Put test line here
+}
+Which line will test that the resulting value is 12?
+Assert.assertEquals(12, ctr.getValue());
+17)
+Under which of the following conditions would the public interface of a class be considered cohesive?
+All of its features are related to the concept that the class represents.
+18)
+A class (ClassOne) is considered to have a dependency on another class (ClassTwo) under which of the following conditions?
+ClassOne uses objects of ClassTwo
+19)
+What mechanism is used by a class that is designed to collect and store a growing set of values?
+An array list or array.
+20)
+When an object is intended to set and manage properties, where should those properties be stored?
+Instance variables
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+Pre-assessment
+1)
+The camel case naming convention uses _________ at intervals in the middle of the variable name.
+uppercase letters
+2)
+What is the Java Virtual Machine?
+A program that simulates a real CPU running compiled Java code.
+3)
+What is an Object?
+An entity in your program that is manipulated by calling methods.
+4)
+A method of a class can access:
+the instance variables of its class, its parameters, and its local variables.
+5)
+The main method for a Java program is defined by 
+public static void main(String[] args){}
+6)
+In the instance variable declaration private int value:
+private is the access modifier, int is the data type, and value is the name of the instance variable.
+7)
+Class to represent a car, can be defined as:
+public class Car
+8)
+A variable whose scope is restricted to the method where it was declared is known as:
+A local variable
+Local variables are those that are “local” to the method in which they have been declared, that is, they are accessible only inside that method. Global variables are those that are accessible from anywhere, while parameters are the variables passed into a method. Instance data can be thought of as global variables for an entire object.
+9)
+What is the output of the code snippet given below?
+String s = "12345";
+int i = 1;
+while (i < 5)
+{
+   System.out.print(s.substring(i, i + 1));
+   i+=2;
+}
+24 <-- 
+10)
+What is the output of this code snippet?
+
+double average;
+int grade1 = 87;
+int grade2 = 94;
+// System.out.print("The average is " + (grade1 + grade2) / 2.0);
+System.out.print("The average is " + average);
+Compile-time error <--- 
+11)
+What tool translates Java source code into files that contain instructions for the Java Virtual Machine?
+compiler
+12)
+What is the name of the file that contains the Java source code for the public class HelloPrinter?
+HelloPrinter.java
+13)
+What mechanism does an object use to store its data?
+instance variables
+14)
+Suppose you want to write an if statement with multiple alternatives to print out someone's tax bracket based on their income. Assume the integer variable income holds the annual income. What is wrong with the following if statement?
+
+if (income < 10000)
+{
+   System.out.println("Lowest tax bracket");
+}
+if (income < 20000)
+{
+   System.out.println("Low-Middle tax bracket");
+}
+if (income < 30000)
+{
+   System.out.println("Middle tax bracket");
+}
+System.out.println("High tax bracket");
+The conditions should use an if else/if else sequence, not just independent if statements
+15)
+Which statement, inserted at the indicated blank line, will correctly terminate this loop when the end of input is reached (detected when the user enters the letter Q)?
+
+ArrayList<Double> data = new ArrayList<Double>();
+boolean done = false;
+while (!done)
+{
+   String input = in.next();
+   if (input.equalsIgnoreCase("Q")) 
+   {
+      __________
+   } 
+   else
+   {
+      double x = Double.parseDouble(input);
+      data.add(x);
+   }
+}
+done = true;
+16)
+Assume the following variable has been declared and given a value as shown:
+
+int[][] data = 
+   {
+      {9, 17, -4, 21 },
+      {15, 24, 0, 9},
+      {6, 2, -56, 8},
+   };
+What is the value of data[0].length?
+4 <----
+17)
+skip 
+18)
+skip 
+19)
+skip 
+20)
+skip 
