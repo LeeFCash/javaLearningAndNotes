@@ -1,0 +1,73 @@
+super(name,age); /*
+for the "exstend" for the child class
+//
+needed to work is that you have a empty constructor along with the overloaded constructor for child class;
+//
+I like to think of it like javascript dom child and parent;
+*/
+/*
+public String displayInfo(){
+	return super.displayInfo();// for getting the java code that is their for the parent of the child; not sure if it goes to top parent or just one up 
+	//return super.displayInfo() + "something" + varName;// extra 
+}
+*/
+// time pass -  
+Student s2 = (Student)p2;/*
+this will copy p2 to s2  
+object is super class for all classes(by "teacher")
+object is the root of the class tree (by website but not word for word)
+*/
+// 
+import java.awt.Rectangle;/*
+Rectangle box = new Rectangle(1,2,3,4);
+System.out.println(box);
+// if I understand right it will make a rectangle 
+*/
+// if I do method(p1); it can give the p1 to "the method(parson p)"// could do method(object p) and it will take everything even if not a parson 
+// @overwrite is put where you overwrite something but I think it can still work without it
+// return this.name.equels(something) && // do the same but something else
+// return this.name.equels(something) && this.name.equels(somethingElse);// something like this to return if true
+// instanceof is used to check if something is apart of something else if I'm right (was used in a if statement )
+// developer d1 = (/* something, think developer */) new Employee(); // casting // allows to make Employee() to work for developer when it would not work normaly 
+//
+/*
+public abstract class Parson {// can make errors // abstract class can not make object but it can act as a data type 
+public abstract void doDuty(); // class to be abstract 
+}
+*/
+/* //arrey 
+employees[0] = new Employee("name1",33,67000);
+employees[1] = new Employee("name2",66,88000);
+*/
+//
+//public class name extends name implement name {}//replace name with whatever fits 
+// implement may still need a casting 
+/*
+Abstract Classes
+ Force programmer to override a method
+ Abstract method has no implementation and it forces the implementers of subclasses to specify a concrete implementation of this method.
+  Syntax: public abstract typename methodName();
+ Objects cannot be instatiated from classes with abstract methods, which are called abstrat classes
+  Syntax: public abstract class ClassName
+
+abstract method in abstract class
+ An abstract method cannot be contained in a nonabstract class. If a subclass of an abstract superclass does not implement all the abstract methods, the subclass must be defined abstract. In other words, in a nonabstract subclass extended from an abstract class, all the abstract methods must be implemented, even if they are not used in the subclass.
+*/
+/*
+Country[0] countries = new Country[3];
+countries[0] = new Country("",176220);
+countries[1] = new Country("",176221);
+countries[2] = new Country("",176222);
+*/
+// comparable is already made so don't make comparable interface
+//
+/*
+ while(//n.hasNextDouble()//in.hasNext()){
+ //double value = in.nextDouble();
+ String word = in.next();
+ System.out.println(word);// something about reading file
+ }
+*/
+// The PrintWriter class in Java is a utility from the java.io package designed for writing formatted text to various output destinations such as files, memory buffers, or network streams. It extends the abstract Writer class and provides convenient methods like print(), println(), and printf() to output different data types (e.g., int, float, String, Object) in a human-readable, formatted manner. Unlike PrintStream, which is a byte stream, PrintWriter is a character stream that uses Unicode for character encoding, making it suitable for text output. It can automatically flush its output buffer if configured with the autoFlush parameter, which triggers a flush after calls to println(), printf(), or format() methods
+//
+//
